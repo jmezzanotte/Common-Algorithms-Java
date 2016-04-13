@@ -13,6 +13,8 @@ public class Staircase {
 	
 	
 	public static void stairCase(int size){
+		
+		// Helper method to allow for a cleaner API. I only want to call stairCase with a single param
 		stairCaseHelper(size,size);
 	}
 	
@@ -21,14 +23,17 @@ public class Staircase {
 			
 			stairCaseHelper(size - 1, original); 
 			
+			// Handle whitespace
 			for(int i = 1; i <= original - size; i++){
 				System.out.print(" "); 
 			}
 			
+			// Handle printed characters
 			for(int i = 1; i <= size; i++){
 				System.out.print("#");
 			}
 			
+			// Line break
 			System.out.println();
 		}
 		
